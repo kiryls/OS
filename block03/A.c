@@ -1,10 +1,6 @@
 #include <stdio.h>
 #define N 256
 
-void contaCaratteri (int * abc) {
-    for(char c = (char)getchar(); c != '\n'; c = getchar()) abc[c]++;
-}
-
 void printAlphabet (int * abc) {
     printf("\n");
     for(int i = 0; i < 'z' - ('a' - 1); i++) {
@@ -22,7 +18,7 @@ int main(int argc, char const *argv[]) {
     int abc[N] = {0};
 
     printf("Inserisci testo:\n>> ");
-    contaCaratteri(abc);
+    for (char c = (char)getchar(); c != '\n'; c = getchar()) abc[c]++;
     printAlphabet(abc);
 
     return 0;
