@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     int count = 0;
     int tot = 0;
     int tmp;
