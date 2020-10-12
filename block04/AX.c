@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 #define N 1024
+#define BB "\033[1m"
+#define NB "\033[0m"
 
 int slength(char s[]) {
     int i;
@@ -21,6 +23,7 @@ int string_is_empty(char s[]) {
 
 int main(int argc, char const *argv[]) { 
     char t[N];
+    
 
     printf("Insert string: ");
     fgets(t, N, stdin);
