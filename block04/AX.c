@@ -21,11 +21,16 @@ int string_is_empty(char s[]) {
 
 int main(int argc, char const *argv[]) { 
     char t[N];
+
+    printf("Insert string: ");
     fgets(t, N, stdin);
 
-    printf("len: %d\n", slength(t));
-    printf("prima: %s", t);
-    printf("dopo: %s\n", scut_last_word(t));
+    printf("Original: %s", t);
+    printf("Size: %d\n", slength(t));
+    printf("Empty: %s\n", string_is_empty(t)?"true":"false");
+    printf("Trimmed: %s\n", scut_last_word(t));
+    printf("Empty: %s\n", string_is_empty(t)?"true":"false");
 
     return 0;
 }
+
