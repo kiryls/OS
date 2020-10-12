@@ -53,6 +53,9 @@ Temporary Items
 !.vscode/extensions.json
 *.code-workspace
 
-a.out
+### custom exclusions ###
+*
+!/**/
+!*.*
 
 # End of https://www.toptal.com/developers/gitignore/api/vscode,osx,linux
