@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
         break;
     
     default:
-        fprintf(stderr, "operation %c is not supported\n", op);
+        fprintf(stderr, "%soperation %c is not supported%s\n", ERR, op, ENDSTYLE);
         return 420;
     }
 
