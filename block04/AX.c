@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
     printf("Insert string: ");
     fgets(t, N, stdin);
 
-    printf("Original: %s", t);
+    printf("%sOriginal%s: %s", BB, NB, t);
     printf("Size: %d\n", slength(t));
     printf("Empty: %s\n", string_is_empty(t)?"true":"false");
     printf("Trimmed: %s\n", scut_last_word(t));
