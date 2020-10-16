@@ -28,7 +28,8 @@ int main(int argc, char const *argv[]) {
         break;
     
     default:
-        fprintf(stderr, "%soperation %c is not supported%s\n", ERR, op, ENDSTYLE);
+        // fprintf(stderr, "%soperation %c is not supported%s\n", ERR, op, ENDSTYLE);
+        ERROR("operazione non supportata\n")
         return 420;
     }
 
