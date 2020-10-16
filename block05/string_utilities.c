@@ -9,7 +9,10 @@ int slength(char s[]) {
 }
 
 char *scut_last_word(char s[]) {
-    
+    int i;
+    for (i = slength(s); i > 0 && *(s + i) != ' '; i--);
+    s[i] = '\0';
+    return s;
 }
 
 int string_is_empty(char s[]) {
