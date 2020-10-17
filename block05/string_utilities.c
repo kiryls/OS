@@ -8,7 +8,7 @@ int slength(char s[]) {
     return i;
 }
 
-char *scut_last_word(char s[]) {
+char * scut_last_word(char s[]) {
     int i;
     for (i = slength(s); i > 0 && *(s + i) != ' '; i--);
     s[i] = '\0';
@@ -38,7 +38,7 @@ int string_is_palindrome(char s[]) {
 }
 
 int string_compare(char s1[], char s2[]) {
-    while (*s1 && *s1 == *s2) 
+    while (*s1 && (*s1 == *s2)) 
         s1++, s2++;
     return (*s2) - (*s1);
 }
