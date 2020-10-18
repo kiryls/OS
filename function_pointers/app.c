@@ -6,7 +6,7 @@ int main(int argc, char const *argv[]) {
     int (*fp)(int, int);
 
     // printf("Write expression <NUM> <OP> <NUM>: ");
-    UNDERLINE("Write expression <NUM> <OP> <NUM>: ")
+    UNDERLINE("Write expression <NUM> <OP> <NUM>: ");
     int a, b;
     char op;
     scanf("%d %c %d", &a, &op, &b);
@@ -30,7 +30,7 @@ int main(int argc, char const *argv[]) {
     
     default:
         // fprintf(stderr, "%soperation %c is not supported%s\n", ERR, op, ENDSTYLE);
-        ERROR("operazione non supportata\n")
+        ERROR("operazione non supportata\n");
         return 420;
     }
 
