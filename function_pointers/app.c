@@ -5,7 +5,8 @@ int main(int argc, char const *argv[]) {
     
     int (*fp)(int, int);
 
-    printf("Write expression <NUM> <OP> <NUM>: ");
+    // printf("Write expression <NUM> <OP> <NUM>: ");
+    UNDERLINE("Write expression <NUM> <OP> <NUM>: ")
     int a, b;
     char op;
     scanf("%d %c %d", &a, &op, &b);
