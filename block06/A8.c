@@ -15,6 +15,7 @@ void processa (char * s) {
             cont++, dentro = 1;
     }
     if(dentro) printf("%d\n", cont);
+    else printf("\n");
 }
 
 int main(int argc, char const *argv[]) {
