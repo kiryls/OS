@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define N 80
+#define N 256
 
 void processa (char * s) {
     int cont = 0;
@@ -28,10 +28,3 @@ int main(int argc, char const *argv[]) {
     return 0;
 }
 
-// int slength(char s[]) {
-//     if(s == NULL) return -1;
-
-//     int i;
-//     for (i = 0; (*(s + i) != '\0') && (*(s + i) != '\n'); i++);
-//     return i;
-// }
