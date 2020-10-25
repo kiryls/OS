@@ -21,9 +21,13 @@ list_cl l_add_cl(list_cl l, client p) {
     l.tail = ln;
 }
 
-client l_rem_cl(list_cl l);
+client l_rem_cl(list_cl l) {
+    
+}
 
-int l_is_empty(list_cl l);
+int l_is_empty(list_cl l) {
+    return l.head == NULL;
+}
 
 list_cl l_clear(list_cl l);
 
