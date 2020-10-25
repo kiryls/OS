@@ -22,7 +22,16 @@ list_cl l_add_cl(list_cl l, client p) {
 }
 
 client l_rem_cl(list_cl l) {
-    
+    client p;
+    if(l_is_empty(l)) return p;
+
+    client p = l.head->person;
+    l_node * tmp = l.head;
+    l.head = l.head->next;
+
+    free(tmp);
+
+    return p;
 }
 
 int l_is_empty(list_cl l) {
