@@ -1,19 +1,20 @@
 #ifndef _CLIENT_H
 #define _CLIENT_H
 
-typedef struct {
-    char            *nome_via;
-    unsigned int    civ;
-    char            *city;
-    unsigned int    cap;
-} address;
-
+#include "address.h"
 
 typedef struct {
-    unsigned int    cf;
-    char            *first_name;
-    char            *last_name;
-    address         adr;   
+   unsigned int cf;
+   const char  *first_name;
+   const char  *last_name;
+   address      addr;
 } client;
+
+extern client cl_set_name(client, const char *,const char *);
+extern client cl_set_address(client, address);
+extern client cl_set_cf(client, unsigned int);
+extern void   client_print(client);
+
+#define CL_EMPTYCLIENT { 0, NULL, NULL, ADDR_EMPTYADDRESS }
 
 #endif
