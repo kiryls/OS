@@ -51,7 +51,6 @@ list_cl l_clear(list_cl l) {
 
 int l_length(list_cl l) {
     int count = 0;
-    for(l_node * n = l.head; n != NULL; n = n->next)
-        count++;
+    for(l_node * n = l.head; n != NULL; n = n->next, count++);
     return count;
 }
