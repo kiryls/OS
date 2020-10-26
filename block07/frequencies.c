@@ -12,9 +12,9 @@
 #define NO_LETTERS ('Z' - 'A' + 1)
 #define is_whitespace(c) ((c) == ' ' || (c) == '\b' || (c) == '\n' || (c) == '\r' || (c) == '\t')
 
-char tolowercase(char c)
-{
-    return c <= 'Z' && c >= 'A' ? c - 'A' + 'a' : c;
+char tolowercase(char c) {
+    int UPPER = c <= 'Z' && c >= 'A';
+    return UPPER * (c - 'A' + 'a') + !UPPER * c;
 }
 
 int max(unsigned int * a, int n) {
