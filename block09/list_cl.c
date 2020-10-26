@@ -17,8 +17,13 @@ list_cl l_add_cl(list_cl l, client p) {
     l_node * ln = new_l_node(p, NULL);
     if(ln == NULL) return l;
 
-    l.tail->next = ln;
-    l.tail = ln;
+    if(l.head == NULL)
+        l.head = l.tail = ln;
+    else {
+        l.tail->next = ln;
+        l.tail = ln;
+    }
+    return l;
 }
 
 client l_rem_cl(list_cl l) {
