@@ -40,7 +40,7 @@ int l_is_empty(list_cl l) {
 
 list_cl l_clear(list_cl l) {
     while(l_is_empty(l)) l_rem_cl(l);
-    l.head = NULL:
+    l.head = NULL;
     return l;
 }
 
