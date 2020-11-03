@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
-{
-    char * str = "Hello WoRLd! Today’s temperature is 34°C.";
-    char * ptr = str;
-    int upper;
+int main() {
+    char * str = "Hello WoRLd! Today’s temperature is 34°C.\n";
+    int mask = 'a' - 'A';
+    char * c = str;
+    int AZ;
 
-    while(*ptr != '\0') {
-        upper = *ptr >= 'A' && *ptr <= 'Z';
-        printf("%c", upper * (*ptr + 'a' - 'A') + !upper * (*ptr));
-        ptr++;
+    while(*c != '\0') {
+        AZ = (*c <= 'Z' && *c >= 'A');
+        printf("%c", AZ*(*c | mask) + !AZ*(*c));
+        c++;
     }
-
     return 0;
 }
+
