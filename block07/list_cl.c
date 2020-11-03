@@ -17,15 +17,20 @@ list_cl l_add_cl(list_cl l, client p) {
     l_node * ln = new_l_node(p, NULL);
     if(ln == NULL) return l;
 
-    l.tail->next = ln;
-    l.tail = ln;
+    if(l.head == NULL)
+        l.head = l.tail = ln;
+    else {
+        l.tail->next = ln;
+        l.tail = ln;
+    }
+    return l;
 }
 
 client l_rem_cl(list_cl l) {
-    client p;
+    client p = CL_EMPTYCLIENT;
     if(l_is_empty(l)) return p;
 
-    client p = l.head->person;
+    p = l.head->person;
     l_node * tmp = l.head;
     l.head = l.head->next;
 
@@ -40,12 +45,12 @@ int l_is_empty(list_cl l) {
 
 list_cl l_clear(list_cl l) {
     while(l_is_empty(l)) l_rem_cl(l);
+    l.head = NULL;
     return l;
 }
 
 int l_length(list_cl l) {
     int count = 0;
-    for(l_node * n = l.head; n != NULL; n = n->next)
-        count++;
+    for(l_node * n = l.head; n != NULL; n = n->next, count++);
     return count;
 }
